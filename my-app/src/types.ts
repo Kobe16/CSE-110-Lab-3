@@ -5,6 +5,8 @@ export enum Label {
     other = "other",
 }
 
+export type GroceryItem = { name: string; isPurchased: boolean };
+
 export type Note = {
     id: number;
     title: string;
