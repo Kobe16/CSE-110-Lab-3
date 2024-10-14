@@ -26,9 +26,11 @@ export function ToDoList() {
 
     setItems(newItems);
 
-    const diff = checkbox.checked ? 1 : -1;
+    //const diff = checkbox.checked ? 1 : -1;
 
-    setNumRemainingItems(numRemainingItems + diff);
+    const numItems = checkedItems.length;
+
+    setNumRemainingItems(numItems);
     }
 
     return (
@@ -52,6 +54,7 @@ function ListItem(item: GroceryItem, changeHandler: ChangeEventHandler) {
         onChange={changeHandler}
         checked={item.isPurchased}
         name={item.name}
+        data-testid="todo-list-checkbox"
         />
         {item.name}
     </div>

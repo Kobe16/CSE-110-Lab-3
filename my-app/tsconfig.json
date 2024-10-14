@@ -13,6 +13,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    "types": ["@testing-library/jest-dom"],
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,

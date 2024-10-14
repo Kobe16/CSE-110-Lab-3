@@ -78,6 +78,7 @@ export const StickyNotes = () => {
 
             <div>
             <textarea
+                placeholder="Note Content"
                 onChange={(event) =>
                 setCreateNote({ ...createNote, content: event.target.value })}
                 onFocus={(event) => event.target.style.backgroundColor = "#e0f7fa"}  // Light blue background on focus
@@ -111,7 +112,7 @@ export const StickyNotes = () => {
                 <LikeButton title={note.title} favList={favoriteList} setFavList={setFavoriteList}/>
                 <button onClick={() => onDelete(note.id)}>x</button>
                 </div>
-                <h2 contentEditable="true" onInput={(e) => onNoteChange(e, note.id)}> {note.title} </h2>
+                <h2 contentEditable="true" data-testid="editable-title" onInput={(e) => onNoteChange(e, note.id)}> {note.title} </h2>
                 <p contentEditable="true"> {note.content} </p>
                 <p contentEditable="true"> {note.label} </p>
             </div>
